@@ -1,0 +1,18 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+	
+}
+
+header{
+	padding-top:50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	h1{
+		font-size:50px;
+		span{
+			color: #28464B;
+		}
+	}
+}

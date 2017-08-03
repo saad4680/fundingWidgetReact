@@ -1,0 +1,28 @@
+.firstForm{
+	margin-top:100px;
+	display: flex;
+	flex-direction: column;
+	font-size:28px;
+	align-items: center;
+	justify-content: space-around;
+	input[type=submit]{
+		margin-top:120px;
+		padding:15px;
+		color:white;
+		border: 1px solid transparent;
+		background: #41337A;
+		border-radius: 15px;
+		transition: all 0.3s;
+	}
+	input[type=submit]:hover{
+		background: #FE938C;
+		color:white;
+	}
+	input[type=number]{
+		border:none;
+		color: #28464B;
+		text-align: center;
+		border-bottom: 2px solid #387D7A ;
+	}
+
+}

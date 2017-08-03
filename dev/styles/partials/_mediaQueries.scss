@@ -1,0 +1,31 @@
+
+
+
+@media (max-width: 480px) {
+  
+    #app .mainWidgetContainer {
+    	margin:5px;
+    }
+    #app .firstForm {
+    	.formItems{
+    		span{
+    			line-height: 50px;
+    		}
+    		
+    	}
+    	input[type=submit]{
+    		font-size: 18px;
+    		margin-bottom: 100px;
+    	}
+
+    }
+    #app .buttons{
+    	width:97vw;
+    	flex-direction: column;
+    	justify-content: center;
+		button{
+			width:97vw;
+			margin:10px 0px;
+		}
+    }
+}

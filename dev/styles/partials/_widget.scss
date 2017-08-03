@@ -1,0 +1,159 @@
+.mainWidgetContainer {
+	min-height:100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+	p {
+		margin-top:50px 0 0 0;
+	}
+
+	.mainWidget{
+		position: relative;
+		font-size:24px;
+		max-width:450px;
+		border: 5px solid #387D7A;
+		border-radius:10px;
+		padding: 50px 20px 20px 20px;
+		.donationsNum{
+			margin:50px 0 80px 0;
+
+		}
+		.Currency {
+			position: relative;
+			input[type=number]{
+				padding:5px;
+				padding-left:18px;
+				width:97%;
+			}	
+
+		}
+		form{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		input[type=submit]{
+				height:43px;
+				width:45%;
+				border:1px solid transparent;
+				color:white;
+				font-size:16px;
+				border-radius:10px;
+				background-color: #41337A;
+				transition: all 0.3s;
+			}
+		input[type=submit]:hover{
+			background-color: #FE938C;
+		}
+
+		}
+
+		.Currency:before{
+				position: absolute;
+				  top: 6px;
+				  content:"$";
+				  left: 5px;
+				}
+
+		.progressBar{
+			display: flex;
+			justify-content: center;
+			margin-bottom:50px;
+			position: relative;
+
+		}
+		.progressBar:hover .bubble{
+			visibility: visible;
+			opacity: 1;
+		}
+
+		progress[value] {
+		  -webkit-appearance: none;
+		   appearance: none;
+		   width: 250px;
+		   height: 20px;
+		   transition:all 0.3s;
+
+		}		
+		progress[value]::-webkit-progress-bar {
+
+		  background-color: #eee;
+		  border-radius: 5px;
+		  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+		}
+		.bubbleContainer{
+			position: absolute;
+			top:-100px;
+
+		
+		.bubble {
+		transition: all 0.5s;
+		position: relative;
+		display:inline-block;
+		max-width:500px;
+		min-height:1.5em;
+		background-color: #FE938C;
+		padding: 5px;
+		border: #FE938C solid 4px;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
+		visibility: hidden;
+		opacity: 0;
+		p{
+			font-size:16px;
+		}
+		}
+
+		.bubble:after 
+		{
+		content: "";
+		position: absolute;
+		bottom: -15px;
+		left: 60%;
+		border-style: solid;
+		border-width: 15px 15px 0;
+		border-color: #FE938C transparent;
+		display: block;
+		width: 0;
+		z-index: 1;
+		}
+
+		.bubble:before 
+		{
+		content: "";
+		position: absolute;
+		bottom: -19.5px;
+		left: calc(60% - 3px) ;
+		border-style: solid;
+		border-width: 18px 18px 0;
+		border-color: #FE938C transparent;
+		display: block;
+		width: 0;
+		z-index: 0;
+		}
+	}
+		
+
+	}
+	.buttons {
+		width: 450px;
+		display: flex;
+		justify-content: space-between;
+		button{
+			height:50px;
+			width:220px;
+			margin:10px 0;
+			border:1px solid transparent;
+			color:white;
+			font-size:16px;
+			border-radius:10px;
+			background-color: #41337A;
+			transition: all 0.3s;
+		}
+		button:hover{
+			background-color: #FE938C;
+		}
+
+	}
+}

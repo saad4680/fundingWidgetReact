@@ -1,0 +1,14 @@
+@import 'partials/setup';
+@import 'partials/mediaQueries';
+@import 'partials/header';
+@import 'partials/firstForm';
+@import 'partials/widget';
+
+.prelude{
+	min-height:100vh;
+	text-align: center;
+}
+input[type=number]{
+	text-align: center;
+	width:200px;
+}
