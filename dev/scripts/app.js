@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CountDown from 'react-number-count-down';
 import $ from 'jquery';
+import NumberInput from './components/NumberInput';
+import Counter from './components/Counter';
+import Progress from './components/Progress';
+import DonationsNumber from './components/DonationsNumber';
+import DonationForm from './components/DonationsForm';
+import Buttons from './components/Buttons';
+
 
 class App extends React.Component {
 	constructor(){
@@ -76,6 +82,7 @@ class App extends React.Component {
 		    		        		inputID="donatedAmount"
 		    		        		inputName="donatedAmount"
 		    		        		recordChange={this.handleChange}
+		    		        		avgDonation={this.state.averageDonation}
 
 		    		        	/>
 		    		        </div>
@@ -186,70 +193,6 @@ class App extends React.Component {
     		alert(`You raised $ ${parseInt(this.state.totalDonations).toLocaleString('en')} which is less than your target amount please refresh the app to try again`)
     	}
     }
-}
-
-const Progress = (props) => {
-	return(
-	<div className="progressBar">
-		<progress value={props.Completion} max="100"></progress>
-		<div className="bubbleContainer">
-			<div className="bubble">
-				<p>  $ {props.Cumulative} pledged of $ {props.Target} goal</p>
-			</div>
-		</div>	
-	</div>
-	)	
-}
-const Counter = (props) => {
-	return(
-	<div className="counter">
-		<span>Only </span>
-		<CountDown from={parseInt(props.dayTarget)} to={0} type={'-'} addon={'days left to fund this project'} interval={5} onComplete={props.handleComplete}/>	
-	</div>
-	)
-
-}
-const DonationsNumber = (props) => {
-	return(
-	<div>
-		<p className="donationsNum">Join the {props.donationsNum} people who have already supported this project. Every Dollar Helps!</p>	
-	</div>
-	)
-}
-const DonationForm = (props) => {
-	return(
-	<div>
-		<form id="donationForm" action="" onSubmit={props.handleSubmit}>
-		<span className="Currency"><input type="number" id={props.inputID} name={props.inputName} onChange={props.recordChange} required/></span>
-		<input type="submit" value="Donate Now"/>
-		</form>
-		<p>Most people donate $ {props.avgDonation}</p>
-	</div>	
-	)
-}
-const Buttons = (props) => {
-	return(
-	<div className="buttons">
-		<button>Share</button>
-		<button>Remind Me Later</button>
-	</div>
-	)
-}
-
-
-class NumberInput extends React.Component{
-	render(){
-		return(
-		<span>
-			<label htmlFor={this.props.inputID}></label>
-			<input type="number" id={this.props.inputID}  name={this.props.inputName} onChange={this.props.recordChange} required/>
-		</span>
-		)
-
-
-	}
-
-
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
